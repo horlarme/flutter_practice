@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_app/HomeScreen.dart';
+import 'package:portfolio_app/SecondScreen.dart';
 
 void main() {
   runApp(Start());
@@ -13,7 +14,10 @@ class Start extends StatelessWidget {
           backgroundColor: Color.fromRGBO(234, 233, 231, 1),
           buttonColor: Color(0xFC7969)),
       initialRoute: '/',
-      routes: {'/': (context) => HomeScreen()},
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/second': (context) => SecondScreen()
+      },
     );
   }
 }

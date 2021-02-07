@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:portfolio_app/SecondScreen.dart';
 import 'package:portfolio_app/widgets/Button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,9 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     this.context = context;
     return Scaffold(
-        backgroundColor: Theme
-            .of(context)
-            .backgroundColor,
+        backgroundColor: Theme.of(context).backgroundColor,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.end,
@@ -19,17 +18,14 @@ class HomeScreen extends StatelessWidget {
             Expanded(
                 flex: 3,
                 child: Image(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width,
+                  width: MediaQuery.of(context).size.width,
                   fit: BoxFit.cover,
                   image: AssetImage('assets/image_1.png'),
                 )),
             Expanded(
                 child: Padding(
                   padding:
-                  const EdgeInsets.only(left: 42, right: 42, bottom: 52),
+                      const EdgeInsets.only(left: 42, right: 42, bottom: 52),
                   child: Container(
                     child: Column(
                       children: [
@@ -66,6 +62,6 @@ class HomeScreen extends StatelessWidget {
 
   navigateToNextScreen() {
     print('Navigating to next screen');
-     Navigator.push(context, '/settings');
+    Navigator.pushNamed(context, '/second');
   }
 }
